@@ -22,6 +22,8 @@ def fetch_weather():
         # Load image based on condition
         if "sunny" in current_condition:
             image_path = "sunny.png"
+        elif "Overcast" in current_condition:
+            image_path = "overcast.png"
 
         weather_icon = PhotoImage(file=image_path)
         resized_icon = weather_icon.subsample(6,6)
