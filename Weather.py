@@ -24,9 +24,11 @@ def fetch_weather():
             image_path = "sunny.png"
         elif "Overcast" in current_condition:
             image_path = "overcast.png"
+        elif "Moderate rain" in current_condition:
+            image_path = "moderate rain.png"
 
         weather_icon = PhotoImage(file=image_path)
-        resized_icon = weather_icon.subsample(6,6)
+        resized_icon = weather_icon.subsample(1,1)
         icon_label.config(image=resized_icon)
         icon_label.image = resized_icon
 
